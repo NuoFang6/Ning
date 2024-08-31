@@ -10,7 +10,6 @@ import {
   Session,
   sleep,
 } from "koishi";
-import { 甘城爱心 } from "./img/imgbase64";
 
 // 接收上下文
 let ctx: Context;
@@ -80,7 +79,7 @@ export async function qqlike(session: Session) {
     session.send(
       <>
         <at id={session.userId} /> 凝尝试为你点了 {n} 个赞{"\n"}
-        <img src={甘城爱心} />
+        <img src="" />
       </>,
     );
 

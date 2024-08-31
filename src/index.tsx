@@ -85,17 +85,22 @@ export function apply(ctx: Context) {
     }
 
     if (session.content === "test") {
-      session.send("1");
-      session.send("2");
-      sleep(2000);
-      session.execute("recall 1");
+      session.send(
+        <>
+          <img src="https://mirror.ghproxy.com/https://github.com/NuoFang6/Ning/raw/master/img/甘城探头.webp" />
+        </>,
+      );
     }
   });
 
   // 互动消息回应
   ctx.on("notice", async (session) => {
     if (session.subtype == "poke" && session.targetId == session.selfId) {
-      session.send("别戳了，我给你点赞还不行吗\n(/▽＼)");
+      session.send(
+        <>
+          <img src="https://mirror.ghproxy.com/https://github.com/NuoFang6/Ning/raw/master/img/甘城探头.webp" />
+        </>,
+      );
       await sleep(800); // 毫秒
       qqlike(session);
     }
